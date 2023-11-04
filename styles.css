@@ -19,11 +19,15 @@ body {
   padding: 0 1.5rem;
   font-size: 1rem;
   font-family: "Red Hat Display", sans-serif;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: var(--pale-blue);
+  background-position: 0 -100px;
 }
 
 .card {
-  width: clamp(325px, 100%, 375px);
+  width: clamp(325px, 100%, 400px);
   margin: 0 auto;
   border-radius: 1rem;
   background-color: white;
