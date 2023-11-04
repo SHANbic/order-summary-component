@@ -1,0 +1,149 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--pale-blue);
+}
+
+.card {
+  width: clamp(325px, 100%, 375px);
+  margin: 0 auto;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 10px 30px hsla(245, 75%, 52%, 0.2);
+
+  > img {
+    width: 100%;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+  }
+
+  > .content {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    > .title {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--dark-blue);
+    }
+
+    > .description {
+      color: var(--desaturated-blue);
+      padding: 0 0.5rem;
+      line-height: 1.625rem;
+    }
+
+    .plan {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: var(--very-pale-blue);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 0.25rem;
+
+      .selected-plan {
+        text-align: left;
+        flex: 1;
+        font-size: 14px;
+      }
+
+      .selected-plan-name {
+        color: var(--dark-blue);
+        font-weight: 900;
+      }
+
+      .selected-plan-price {
+        color: var(--desaturated-blue);
+        font-weight: 500;
+      }
+
+      > a {
+        font-size: 13px;
+        color: var(--bright-blue);
+        font-weight: 900;
+        transition: all 100ms;
+        &:hover {
+          text-decoration: none;
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-family: "Red Hat Display", sans-serif;
+
+  font-size: 14px;
+  .order {
+    color: white;
+    background-color: var(--bright-blue);
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 30px hsla(245, 75%, 52%, 0.25);
+    transition: all 100ms;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.75;
+      box-shadow: 0 10px 30px hsla(245, 75%, 52%, 0.5);
+    }
+  }
+  .cancel-order {
+    font-family: inherit;
+    font-weight: 900;
+    font-size: inherit;
+    color: var(--desaturated-blue);
+    border: none;
+    background-color: transparent;
+    transition: all 100ms;
+    &:hover {
+      cursor: pointer;
+      color: var(--dark-blue);
+    }
+  }
+}
+
+footer {
+  margin-top: 2rem;
+  color: var(--dark-blue);
+
+  > a {
+    text-decoration: none;
+    color: var(--very-pale-blue);
+    text-shadow: 0 0 4px var(--bright-blue);
+    transition: all 200ms;
+    &:hover {
+      color: var(--bright-blue);
+      text-shadow: 0 0 2px white;
+    }
+  }
+}
